@@ -12,7 +12,7 @@ Requirements:
 + Java 11 GraalVM 21.1.0-dev (may work with 21.0.0)
 
 
-###To build:
+### To build:
 ```sh
 javac -cp lib/openmap-5.1.13.jar SwingTest.java
 
@@ -21,7 +21,7 @@ java -cp ".:lib/openmap-5.1.13.jar" -agentlib:native-image-agent=config-output-d
 native-image -cp ".:lib/openmap-5.1.13.jar" --no-fallback --verbose -Djava.awt.headless=false SwingTest
 ```
 
-###To run
+### To run
 ```sh
 ./swingtest
 ```
