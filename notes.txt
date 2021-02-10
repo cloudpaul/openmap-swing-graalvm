@@ -1,0 +1,10 @@
+javac SwingTest.java
+java -agentlib:native-image-agent=config-output-dir=META-INF/native-image  SwingTest
+native-image --no-fallback --verbose -Djava.awt.headless=false SwingTest
+
+-- with OpenMap --
+
+javac -cp lib/openmap-5.1.13.jar SwingTest.java
+java -cp ".:lib/openmap-5.1.13.jar" -agentlib:native-image-agent=config-output-dir=META-INF/native-image SwingTesT
+
+native-image -cp ".:lib/openmap-5.1.13.jar" --no-fallback --verbose -Djava.awt.headless=false SwingTest
